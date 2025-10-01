@@ -1,0 +1,68 @@
+const words = ["One Shot.", "One Essay.", "Make It Matter.", "Let's go"]
+
+let wordIndex = 0
+let charIndex = 0
+
+let addingChars = true;
+let shouldWait = false;
+
+let currentWord =  words[wordIndex]
+
+ const updateCurrWord = () => {
+     wordIndex++
+
+     if (wordIndex === words.length) wordIndex = 0
+
+     currentWord = words[wordIndex]
+ }
+
+function addChar() {
+    let currChar = currentWord[charIndex]
+
+    let char = document.createElement('span')
+
+    char.classList.add("char")
+    char.innerText = currChar
+
+
+    document.querySelector(".typed").appendChild(char)
+
+    charIndex++
+
+    if (charIndex == currentWord.length) {
+        charIndex--
+        addingChars = false
+        shouldWait = true
+    }
+}
+
+const removeChar = () => {
+    const char = document.querySelector(".typed").lastElementChild
+
+    document.querySelector(".typed").removeChild(char)
+
+    charIndex--
+
+    if (charIndex < 0){
+        charIndex++
+        addingChars = true
+        updateCurrWord()
+    }
+}
+
+const runTypewriter = () => {
+    const operation = addingChars  ? addChar : removeChar
+
+    operation()
+
+    let timeout = addingChars ? 200 : 100
+
+    if (shouldWait){
+        timeout = 900
+        shouldWait = false
+    }
+
+    setTimeout(runTypewriter, timeout)
+}
+
+setTimeout(runTypewriter, 100)

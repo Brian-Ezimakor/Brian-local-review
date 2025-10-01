@@ -1,0 +1,1065 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+--darkblue: #032080;
+--optblue: #0c71c3;
+--collegeblue: #2542e8;
+--lightblue: #4e9dff;
+--white: #ffffff;
+--strangeGrey: #ededed;
+}
+
+html, body {
+font-family: "Inter", sans-serif;
+width: 100%;
+height: 100%;
+margin: 0px;
+padding: 0px;
+overflow-x: hidden;
+scroll-behavior: smooth;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+outline: none;
+transition: all 0.2s ease-in;
+scroll-behavior: smooth;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translate(0, 4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideX {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.divUp {
+animation: fade both;
+animation-duration: 7s;
+animation-timing-function: linear;
+animation-delay: 6.9s;
+animation-timeline: view(y);
+animation-range-start: cover 22.5vh;
+animation-range-end: cover 51.2vh;
+/* animation: fade 1s 1s both; */
+}
+
+body {
+overflow-x: visible;
+}
+
+.header-hero {
+background: linear-gradient(to bottom, #e7f5ff, #ffffff);
+/* background: linear-gradient(to bottom, #f4faff, #ffffff); */
+}
+
+header {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+padding-left: 70px;
+padding-right: 74px;
+width: 100%;
+background-color: transparent;
+padding-top: 40px;
+padding-bottom: 30px;
+}
+
+.logo-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding-block: auto;
+padding-top: 1px;
+}
+
+.logo {
+height: 31px;
+background-repeat: no-repeat;
+background-size: cover;
+object-fit: cover;
+}
+
+.links {
+display: flex;
+flex-direction: row;
+gap: 28px;
+font-size: 16.5px;
+height: 100%;
+align-items: center;
+}
+
+.links a:not(.active) {
+cursor: pointer;
+letter-spacing: 0.8px;
+color: black;
+font-weight: 450;
+}
+
+.links a {
+text-align: center;
+}
+
+.links a:hover {
+color: var(--collegeblue);
+}
+
+.active {
+color: var(--chatcolor);
+font-weight: bold;
+}
+
+.button {
+background-color: var(--lightblue);
+color: white;
+border: 1px solid transparent;
+padding: 14px 32px;
+border-radius: 40px;
+font-size: 15px;
+cursor: pointer;
+z-index: 100;
+display: inline-block;
+position: relative;
+overflow: hidden;
+box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.button::before {
+content: "";
+/* background-color: black; */
+background-color: var(--collegeblue);
+position: absolute;
+border-radius: 40px;
+z-index: -1;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+transition: width 0.3s ease;
+}
+
+.button:hover::before {
+width: 100%;
+}
+
+.menu-bar {
+display: none;
+}
+
+.menu-bar div {
+height: 3px;
+width: 32px;
+background-color: black;
+transition: .45;
+border-radius: 52px;
+cursor: pointer;
+}
+
+.menu-bar div:not(:last-child) {
+margin-bottom: 6px;
+}
+
+.menuAccordion {
+height: 100%;
+width: 90%;
+position: fixed;
+top: 0;
+bottom: 0;
+background-color: white;
+z-index: 10000;
+right: -700px;
+overflow-y: auto;
+scroll-behavior: smooth;
+transition: 0.5s;
+display: none;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+body.activeSlide .menuAccordion {
+right: 0;
+}
+
+.menuHeader {
+padding: 0.9rem;
+padding-left: 14px;
+padding-right: 21px;
+height: 75px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+font-weight: bold;
+border-bottom: 1px solid #000000;
+overflow: hidden;
+}
+
+.menuHeader p {
+font-size: 22px;
+color: black;
+}
+
+.menu-cross div {
+height: 4px;
+width: 26px;
+background-color: var(--newred);
+transition: .45;
+position: relative;
+border-radius: 68px;
+cursor: pointer;
+}
+
+summary {
+display: block;
+}
+
+.menuDropdown:hover {
+text-decoration: none;
+}
+
+.menulinks {
+display: flex;
+flex-direction: column;
+padding-top: 8px;
+gap: 3px;
+padding-left: 10px;
+}
+
+.menulinks a, .sturborn a {
+font-weight: normal;
+color: #000000;
+}
+
+.one {
+transform: rotate(132deg);
+position: relative;
+background-color: white;
+top: 4px;
+}
+
+.twO {
+transform: rotate(-134deg);
+position: relative;
+}
+
+.goto {
+display: flex;
+flex-direction: column;
+gap: 24px;
+padding-left: 24px;
+padding-top: 36px;
+padding-bottom: 32px;
+}
+
+.goto a {
+font-size: 18px;
+font-weight: bold;
+color: var(--newred);
+text-underline-offset: 4px;
+}
+
+.goto a:hover {
+text-decoration: 3px solid var(--chatcolor) underline;
+}
+
+.btns {
+padding-inline: 24px;
+display: flex;
+flex-wrap: wrap;
+gap: 32px;
+}
+
+.btns .button {
+width: 100%;
+text-align: center;
+}
+
+.accord {
+text-align: center;
+align-items: center;
+justify-content: center;
+width: 100%;
+}
+
+h1, h2, h3, h4 {
+font-family: "PT Sans", sans-serif;
+z-index: 2;
+}
+
+p {
+text-wrap: pretty;
+}
+
+button, img {
+user-select: none;
+}
+
+.newlink-holder {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+gap: 44px;
+}
+
+.hero {
+text-align: center;
+padding-top: 80px;
+background-color: transparent;
+}
+
+.hero h1 {
+font-size: 62px;
+text-align: center;
+letter-spacing: 0.3px;
+line-height: 72px;
+padding-bottom: 30px;
+padding-inline: 170px;
+}
+
+.hero p {
+font-size: 17px;
+line-height: 24px;
+padding-inline: 178px;
+margin-bottom: 44px;
+}
+
+.hero .button {
+margin-bottom: 60px;
+}
+
+.hero-image img {
+text-align: center;
+height: 500px;
+background-repeat: no-repeat;
+background-size: cover;
+object-fit: cover;
+}
+
+.explain {
+background-color: var(--strangeGrey);
+padding-block: 72px;
+padding-inline: 100px;
+font-size: 16px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+gap: 36px;
+}
+
+section p:not(:first-of-type) {
+font-size: 16px;
+line-height: 26px;
+max-width: 55ch;
+}
+
+.explain img {
+background-repeat: no-repeat;
+background-size: cover;
+object-fit: cover;
+}
+
+.alone-p {
+margin-bottom: 20px;
+}
+
+.alone-p span {
+font-weight: 550;
+}
+
+.h2intro {
+font-weight: 500;
+font-size: 19px;
+padding-bottom: 3px;
+color: var(--lightblue);
+}
+
+h2 {
+font-size: 38px;
+padding-bottom: 14px;
+color: var(--darkblue);
+}
+
+.clarity {
+padding-block: 72px;
+padding-inline: 100px;
+text-align: center;
+}
+
+.essays-container {
+margin-top: 32px;
+margin-bottom: 40px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+gap: 32px;
+}
+
+.essays-container img {
+background-repeat: no-repeat;
+background-size: cover;
+object-fit: cover;
+height: 60px;
+}
+
+.essays-container div p:first-of-type {
+font-weight: 520;
+font-size: 17px;
+}
+
+.essays-container div {
+background-color: white;
+border-radius: 18px;
+padding: 28px;
+gap: 16px;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+/* box-shadow: rgba(13, 13, 13, 0.199) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: auto;
+flex-wrap: wrap;
+}
+
+.prove {
+background-color: var(--strangeGrey);
+padding-block: 36px;
+padding-inline: 100px;
+text-align: center;
+}
+
+.proveDivWrapper {
+margin-top: 32px;
+margin-bottom: 28px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+gap: 36px;
+text-align: left;
+}
+
+.proveDivWrapper div {
+background-color: white;
+border-radius: 16px;
+padding: 30px;
+width: 100%;
+display: flex;
+/* align-items: center; */
+justify-content: center;
+flex-direction: column;
+box-shadow: rgba(13, 13, 13, 0.199) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: auto;
+flex-wrap: wrap;
+gap: 16px;
+text-align: left;
+}
+
+.stars {
+color: #FDCC0D;
+text-align: left;
+float: left;
+/* font-size: 30px; */
+}
+
+.ht {
+font-size: 26px;
+}
+
+.proveText {
+font-size: 14px;
+letter-spacing: 0.2px;
+}
+
+.proveDivWrapper div p:last-child {
+font-weight: 300;
+font-size: 16px;
+}
+
+
+.ctaSection {
+padding-block: 90px;
+padding-inline: 100px;
+text-align: center;
+background: linear-gradient(to bottom, #ecf7ff, #ffffff);
+/* background-color: var(--strangeGrey); */
+}
+
+.ctaSection h1 {
+padding-bottom: 24px;
+}
+
+.ctaSection p {
+margin-bottom: 32px;
+}
+
+.typed {
+font-size: 62px;
+text-align: center;
+letter-spacing: 0.5px;
+position: relative;
+padding-left: 50px;
+display: inline-block;
+}
+
+.typed::first-letter {
+font-size: 62px;
+color: transparent;
+}
+
+hr {
+border: 1px solid lightgray;
+margin-inline: 64px;
+}
+
+footer {
+padding-inline: 90px;
+padding-top: 56px;
+padding-bottom: 52px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+gap: 68px;
+}
+
+.footlogo, .footlinks, .socialDiv {
+flex-basis: auto;
+flex-grow: 1;
+flex-shrink: 1;
+}
+
+.footlogo p {
+max-width: 42ch;
+font-size: 15px;
+}
+
+.footlogo img {
+height: 40px;
+background-repeat: no-repeat;
+background-size: cover;
+object-fit: cover;
+}
+
+.footlinks {
+display: flex;
+flex-direction: row;
+gap: 40px;
+}
+
+.accesslink p, .socialDiv p {
+margin-bottom: 6px;
+font-weight: 520;
+font-size: 17px;
+color: var(--darkblue);
+}
+
+.accesslink {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.accesslink a, .mail-link {
+color: black;
+}
+
+.accesslink a:hover, .mail-link:hover {
+color: var(--collegeblue);
+}
+
+.socials {
+display: flex;
+flex-direction: row;
+gap: 16px;
+margin-top: 20px;
+}
+
+.socials a {
+background-color: var(--lightblue);
+border: 1px solid transparent;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 1px;
+text-align: center;
+border-radius: 50%;
+height: 42px;
+width: 42px;
+color: white;
+font-size: 17px;
+box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.socials a:hover {
+background-color: var(--collegeblue);
+border: 1px solid transparent;
+}
+
+.rights {
+position: relative;
+bottom: 0;
+left: 0;
+right: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+flex-basis: auto;
+flex-grow: 1;
+flex-shrink: 1;
+padding: 18px 1px;
+background-color: white;
+color: grey;
+font-size: 17px;
+}
+
+
+@media screen and (max-width: 475px){
+    body {
+    overflow-x: hidden;
+    }
+
+    header {
+    padding-left: 18px;
+    padding-right: 26px;
+    padding-top: 24px;
+    padding-bottom: 20px;
+    /* height: 90px; */
+    }
+
+    .links {
+    display: none;
+    }
+
+    .menuAccordion {
+    display: block;
+    }
+
+    .menu-bar {
+    display: block;
+    }
+
+    .cta {
+    display: none;
+    }
+
+    .logo-container {
+    justify-content: center;
+    align-items: normal;
+    padding-top: 10px;
+    }
+
+    .logo-container p {
+    font-size: 16px;
+    }
+
+    .logo {
+    height: 26px;
+    }
+
+    .hero {
+    text-align: center;
+    padding-top: 36px;
+    }
+
+    .hero h1 {
+    font-size: 38px;
+    line-height: 37px;
+    padding-inline: 0px;
+    text-align: center;
+    }
+
+    .hero p {
+    font-size: 16px;
+    line-height: 22px; 
+    padding-inline: 16px;
+    margin-bottom: 36px;
+    }
+
+    .hero-image img {
+    height: 300px;
+    }
+
+    .explain, .clarity, .prove, .ctaSection {
+    padding-inline: 20px;
+    }
+
+    .explain {
+    flex-direction: column;
+    padding-block: 36px;
+    padding-inline: 18px;
+    }
+
+    .essays-container, .proveDivWrapper {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    }
+
+    .h2intro {
+    font-size: 17px;
+    }
+
+    h2 {
+    font-size: 28px;
+    }
+
+    .clarity {
+    padding-block: 40px;
+    }
+
+    .essays-container {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    margin-top: 2px;
+    gap: 22px;
+    }
+
+    .essays-container div {
+    padding: 22px;
+    }
+
+    .proveDivWrapper {
+    margin-top: 24px;
+    margin-bottom: 22px;
+    }
+
+    .ctaSection {
+    padding-block: 44px;
+    }
+
+    .ctaSection h1 {
+    padding-bottom: 22px;
+    }
+
+    .ctaSection p {
+    margin-bottom: 26px;
+    }
+
+    .typed, .typed::first-letter {
+    font-size: 36px;
+    }
+
+    hr {
+    margin-inline: 32px;
+    }
+ 
+    footer {
+    flex-wrap: wrap;
+    padding-inline: 22px;
+    gap: 40px;
+    padding-bottom: 28px;
+    }
+
+    .footlogo img {
+    height: 32px;
+    }
+
+    .footlinks {
+    justify-content: space-between;
+    }
+
+}
+
+@media screen and (min-width: 475px) and (max-width: 640px) {
+    body {
+    overflow-x: hidden;
+    }
+
+    header {
+    padding-left: 26px;
+    padding-right: 28px;
+    padding-top: 26px;
+    padding-bottom: 22px;
+    }
+
+    .links {
+    display: none;
+    }
+
+    .menuAccordion {
+    display: block;
+    }
+
+    .menu-bar {
+    display: block;
+    }
+
+    .cta {
+    display: none;
+    }
+
+    .logo-container {
+    justify-content: center;
+    align-items: normal;
+    padding-top: 10px;
+    }
+
+    .logo-container p {
+    font-size: 16px;
+    }
+
+    .logo {
+    height: 40px;
+    }
+
+    .hero {
+    text-align: center;
+    padding-top: 38px;
+    padding-bottom: 16px;
+    padding-inline: 32px;
+    }
+
+    .hero h1 {
+    font-size: 58px;
+    /* line-height: 58px; */
+    padding-inline: 0;
+    text-align: center;
+    }
+
+    .hero p {
+    font-size: 16px;
+    line-height: 22px; 
+    padding-inline: 16px;
+    }
+
+    .hero .button {
+    margin-bottom: 42px;
+    }
+
+    .explain, .clarity, .prove, .ctaSection {
+    padding-inline: 24px;
+    }
+
+    .explain {
+    flex-direction: column;
+    padding-block: 36px;
+    }
+
+    .essays-container, .proveDivWrapper {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    }
+
+    h2 {
+    font-size: 30px;
+    }
+
+    .clarity {
+    padding-block: 44px;
+    }
+ 
+    .proveDivWrapper {
+    margin-top: 28px;
+    margin-bottom: 26px;
+    }
+
+    .ctaSection {
+    padding-block: 50px;
+    }
+
+    .ctaSection h1 {
+    padding-bottom: 22px;
+    }
+
+    .ctaSection p {
+    margin-bottom: 26px;
+    }
+
+    .typed, .typed::first-letter {
+    font-size: 38px;
+    }
+
+    hr {
+    margin-inline: 28px;
+    }
+
+    footer {
+    flex-wrap: wrap;
+    padding-inline: 32px;
+    gap: 40px;
+    padding-bottom: 28px;
+    }
+
+    .footlinks {
+    justify-content: space-between;
+    }
+
+}
+
+
+
+@media screen and (min-width: 640px) and (max-width: 768px){
+    body {
+    overflow-x: hidden;
+    }
+
+    header {
+    padding-left: 28px;
+    padding-right: 30px;
+    padding-top: 26px;
+    padding-bottom: 22px;
+    }
+
+    .links {
+    display: none;
+    }
+
+    .menuAccordion {
+    display: block;
+    }
+
+    .menu-bar {
+    display: block;
+    }
+
+    .cta {
+    display: none;
+    }
+
+    .logo-container {
+    justify-content: center;
+    align-items: normal;
+    padding-top: 10px;
+    }
+
+    .logo-container p {
+    font-size: 16px;
+    }
+
+    .logo {
+    height: 46px;
+    }
+
+    .hero {
+    text-align: center;
+    padding-top: 38px;
+    padding-bottom: 16px;
+    padding-inline: 32px;
+    }
+
+    .hero h1 {
+    font-size: 62px;
+    /* line-height: 58px; */
+    padding-inline: 0;
+    text-align: center;
+    }
+
+    .hero p {
+    font-size: 16px;
+    line-height: 22px; 
+    padding-inline: 16px;
+    }
+
+    .hero .button {
+    margin-bottom: 42px;
+    }
+
+    .explain {
+    padding-inline: 24px;
+    padding-block: 50px;
+    }
+
+    .clarity, .prove, .ctaSection {
+    padding-inline: 28px;
+    }
+
+    .explain {
+    flex-direction: column;
+    padding-block: 36px;
+    }
+
+    .essays-container, .proveDivWrapper {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    }
+
+    h2 {
+    font-size: 36px;
+    }
+
+    .clarity {
+    padding-block: 44px;
+    }
+ 
+    .proveDivWrapper {
+    margin-top: 28px;
+    margin-bottom: 26px;
+    }
+
+    .ctaSection {
+    padding-block: 50px;
+    }
+
+    .ctaSection h1 {
+    padding-bottom: 24px;
+    }
+
+    .ctaSection p {
+    margin-bottom: 28px;
+    }
+
+    .typed, .typed::first-letter {
+    font-size: 62px;
+    }
+
+    hr {
+    margin-inline: 32px;
+    }
+
+    footer {
+    flex-wrap: wrap;
+    padding-inline: 32px;
+    gap: 44px;
+    padding-bottom: 28px;
+    }
+
+    .footlinks {
+    justify-content: space-between;
+    }
+
+}
