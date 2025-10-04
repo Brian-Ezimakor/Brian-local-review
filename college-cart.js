@@ -35,8 +35,8 @@ selectElement.addEventListener("change", (event) => {
     }
 
     else {
-        priceValue.innerHTML = "$85"
-        priceHeaderValue.innerHTML = "$85"
+        priceValue.innerHTML = "$35"
+        priceHeaderValue.innerHTML = "$35"
         school.style.display = "none"
         word.style.display = "none"
     }
@@ -223,3 +223,4 @@ function update() {
 function develop() {
     alert("Oops, this feature is still in development.")
 }
+
