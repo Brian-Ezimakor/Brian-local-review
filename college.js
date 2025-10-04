@@ -1,4 +1,4 @@
-const words = ["One Shot.", "One Essay.", "Make It Matter.", "Let's go"]
+const words = ["One Shot.", "One Essay.", "Make It Matter.", "Let's go."]
 
 let wordIndex = 0
 let charIndex = 0
@@ -66,3 +66,4 @@ const runTypewriter = () => {
 }
 
 setTimeout(runTypewriter, 100)
+
