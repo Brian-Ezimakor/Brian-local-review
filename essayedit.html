@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Get expert help editing your college essays, UC PIQs, and supplements. Boost your application with clear, compelling, and admission-ready writing.">
+
+<!-- CHANGE YOU CONTENT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<!-- ADD SCHEMA PLEASE PLEASE PLEASE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
+<meta name="author" content="Brian Ezimakor">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>College Essay Review | Get College Results .Com</title>
+<link rel="stylesheet" href="college.css" as="style">
+<link rel="stylesheet" href="essayedit.css" as="style"> 
+<link rel="icon" href="grc-icon-e.png">
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+<base target="_parent">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=language" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/2ec882c8ad.js" crossorigin="anonymous"></script>
+<script src="menuscript.js" async></script>
+<script src="college-cart.js" defer></script>
+</head>
+
+<body>
+
+    <section class="header-hero">
+    <header>
+        <nav class="logo-container" title="Get College Results .Com">
+        <a href="/"><img src="grc-icon-e.png" class="logo1" alt="GetCollegeResults-logo"></a>
+        </nav>
+
+        <div class="newlink-holder" onclick="openCart()">
+            <div class="shoppingCart" onclick="openCart()">
+                <i class="fa-solid fa-cart-shopping cartIcon" onclick="openCart()"></i>
+                <p id="cart-value" onclick="openCart()">0</p>
+            </div>
+        </div>
+    </header>
+    </section>
+
+    <section class="newhero">
+        <h1>Let’s Review Your Essay</h1>
+        <p>We’ll help shape your story—making it the ideal college essay.</p>
+    </section>
+
+    <section class="formSection">
+            <form action="">
+                <div class="formhead">
+                    <p>Essay Review</p>
+
+                    <span id="price-change">$</span>
+                </div>
+
+                <div class="formfields">
+                <div>
+                    <label for="type">Type</label>
+                    <select id="type" name="type" required>
+                        <option value="">--Please choose an option*--</option>
+                        <option value="The Common App Essay">The Common App Essay</option>
+                        <option value="Supplemental Essay">Supplemental Essay</option>
+                        <option value="UC PIQs">UC PIQs</option>
+                    </select>
+                </div>
+
+                <div id="school-name">
+                <div>
+                    <label for="school">School</label>
+                    <input type="text" name="school" id="school" placeholder="School name">
+                </div>
+                </div>
+
+                <div id="word-count">
+                <div>
+                    <label for="word">Word Count</label>
+                    <input type="text" name="word" id="word" placeholder="E.g 0-75 words">
+                </div>
+                </div>
+
+                <div class="stack">
+                    <label for="essay-prompt">Essay</label>
+                    <input type="text" name="essay-prompt" id="essay-prompt" placeholder="Essay prompt & word limit">
+                    <textarea name="essay" id="essay" placeholder="Paste your essay here*"></textarea>
+                </div>
+
+                <div class="stack">
+                    <label for="comments">Comments</label>
+                    <textarea name="comments" id="comments" placeholder="Any comments or additional info for us?" required></textarea>
+                </div>
+
+                <div class="stack">
+                    <label for="name">Information</label>
+                    <input type="text" name="name" id="name" placeholder="Your Fullname">
+                    <input type="email" name="email" id="email" placeholder="Your Email-address">
+                </div>
+                </div>
+
+            </form>
+
+        <div class="overview">
+            <p class="divheading">Overview</p>
+
+            <ul>
+            <li>Valuable advice to make your story engaging and compelling</li>
+            <li>In-line edits, margin comments, and substantive final comments</li>
+            <li>Available in as little as 24 hours</li>
+            </ul>
+
+            <div class="secondp">
+            <p>100% Satisfaction Guarantee</p>
+
+            <p>We can’t guarantee acceptance to any particular college, but if you are unsatisfied with the work we 
+            have done, let us know. We’ll keep working to make it better!</p>
+            </div>
+
+            <div class="cartdiv">
+                <div class="priceteller">
+                    <p>Price:</p>
+                    <p id="price">$</p>
+                </div>
+                <a href="#" class="button addtoCart" id="addtoCart"><i class="fa-solid fa-cart-plus"></i>&nbsp; Add to Cart</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="displaytoggler" id="displaytoggler">
+        <div class="cartPopUp">
+
+            <div class="cartHead">
+                <p>Your Cart</p>
+                <i class="fa-solid fa-x xhead" onclick="closeCart()"></i>
+            </div>
+
+            <div class="itemsHolder" id="itemsHolder">
+
+                <div class="cart-item" id="cart-item">
+                    <div>
+                        <p>Essay Review</p>
+                        <p>Common App essay</p>
+                        <p class="itemPrice">$85</p>
+                    </div>
+                    <i class="fa-solid fa-x xitem"></i>
+                </div>
+
+                <div class="cart-item" id="cart-item">
+                    <div>
+                        <p>Essay Review</p>
+                        <p>Common App essay</p>
+                        <p class="itemPrice">$85</p>
+                    </div>
+                    <i class="fa-solid fa-x xitem"></i>
+                </div>
+
+                <div class="cart-item" id="cart-item">
+                    <div>
+                        <p>Essay Review</p>
+                        <p>Supplemental Essay</p>
+                        <p>Gauteng Institute of Caleb</p>
+                        <p>0-75 words</p>
+                        <p class="itemPrice">$35</p>
+                    </div>
+                    <i class="fa-solid fa-x xitem"></i>
+                </div>
+            </div>
+
+            <div id="alert"></div>
+
+            <div class="checkout-div">
+                <div>
+                    <p>Items: <span id="itemSum"></span></p>
+                    <p>Subtotal: $<span id="total"></span></p>
+                </div>
+
+                <div class="checkoutBtns">
+                    <a class="button" onclick="closeCart()">Keep Shopping</a>
+                    <a class="button" onclick="develop()">Checkout</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

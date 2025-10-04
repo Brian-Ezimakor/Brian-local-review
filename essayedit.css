@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+--darkblue: #032080;
+--optblue: #0c71c3;
+--collegeblue: #2542e8;
+--lightblue: #4e9dff;
+--white: #ffffff;
+--strangeGrey: #ededed;
+}
+
+.logo1 {
+height: 40px;
+background-repeat: no-repeat;
+background-size: cover;
+object-fit: cover;
+}
+
+header {
+padding-top: 20px;
+padding-bottom: 20px;
+padding-right: 84px;
+}
+
+.shoppingCart {
+display: flex;
+gap: 8px;
+align-items: center;
+justify-content: center;
+text-align: center;
+cursor: pointer;
+}
+
+.cartIcon {
+font-size: 21px;
+}
+
+.shoppingCart p {
+font-weight: 500pc;
+font-size: 19px;
+}
+
+.newhero {
+text-align: center;
+padding-top: 36px;
+margin-bottom: 60px;
+}
+
+.newhero h1 {
+font-size: 46px;
+letter-spacing: 0.1px;
+padding-bottom: 18px;
+}
+
+.newhero p {
+font-size: 17px;
+}
+
+.formSection {
+padding-inline: 100px;
+display: flex;
+gap: 50px;
+justify-content: space-between;
+padding-bottom: 80px;
+/* flex-wrap: wrap; */
+}
+
+form {
+width: 100%;
+}
+
+.formSection div, form {
+flex-basis: auto;
+flex-grow: 1;
+flex-shrink: 1;
+}
+
+.formhead {
+width: 100%;
+display: flex;
+justify-content: space-between;
+padding: 24px 18px;
+background-color: var(--darkblue);
+font-size: 17px;
+font-weight: 500;
+color: #ffffff;
+border-top-left-radius: 14px;
+border-top-right-radius: 14px;
+}
+
+.formfields {
+background-color: var(--optblue);
+color: white;
+padding: 18px 18px;
+border-bottom-left-radius: 14px;
+border-bottom-right-radius: 14px;
+display: flex;
+flex-direction: column;
+gap: 23px;
+}
+
+.formfields div:not(.stack) {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+
+.stack {
+display: flex;
+flex-direction: column;
+gap: 14px;
+}
+
+label {
+font-size: 16.8px;
+}
+
+input, textarea, select {
+padding: 16px 20px;
+border: 0;
+outline: 0;
+border-radius: 20px;
+font-size: 16px;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;
+}
+
+select, #word, #school {
+width: 75%;
+background-color: #fff;
+color: black;
+}
+
+#word-count, #school-name {
+display: none;
+}
+
+select, select::picker(select) {
+appearance: base-select;
+}
+
+select option {
+padding-block: 8px;
+}
+
+select option:hover {
+background-color: var(--collegeblue);
+color: white;
+}
+
+textarea {
+height: 130px;
+}
+
+input::placeholder, textarea::placeholder {
+font-size: 16px;
+font-family: "Inter", sans-serif;
+}
+
+.overview {
+border-radius: 14px;
+padding: 24px 18px;
+background-color: var(--strangeGrey);
+height: 100%;
+}
+
+.overview .divheading {
+font-size: 17px;
+font-weight: 500;
+text-align: center;
+margin-bottom: 16px;
+}
+
+.overview ul {
+display: flex;
+flex-direction: column;
+gap: 12px;
+list-style: none;
+}
+
+li::before {
+content: "✔️";
+margin-right: 8px;
+line-height: 30px;
+}
+
+.secondp {
+margin-top: 25px;
+margin-bottom: 24px;
+}
+
+.secondp p:first-of-type {
+margin-bottom: 8px;
+font-size: 17px;
+font-weight: 500;
+text-align: center;
+}
+
+.cartdiv {
+display: flex;
+flex-direction: column;
+gap: 18px;
+width: 100%;
+}
+
+.cartdiv .button {
+text-align: center;
+}
+
+.priceteller {
+background-color: white;
+color: black;
+padding: 14px 32px;
+border-radius: 20px;
+font-size: 16px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+
+.displaytoggler {
+display: none;
+position: fixed;
+z-index: 300;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.4);
+scrollbar-width: none;
+-ms-overflow-style: none;
+}
+
+.displaytoggler::-webkit-scrollbar {
+display: none;
+}
+
+.cartPopUp {
+background-color: #fff;
+margin: 10% auto;
+border-radius: 8px;
+width: 80%;
+/* max-width: 400px; */
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+position: relative;
+}
+
+.cartHead {
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-align: center;
+padding-block: 12px;
+font-size: 18px;
+font-weight: 500;
+border-bottom: 1px solid lightgray;
+padding: 26px 28px;
+}
+
+.cart-item {
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 18px;
+font-weight: 570;
+border-bottom: 1px solid lightgray;
+padding: 10px 28px;
+}
+
+#alert {
+color: black;
+padding: 32px 28px;
+border-bottom: 1px solid lightgray;
+font-size: 18px;
+font-weight: 570;
+text-align: center;
+}
+
+.cart-item div {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.cart-item p:not(:first-child), .checkout-div span {
+font-weight: normal;
+font-size: 17px;
+}
+
+.xhead {
+font-weight: bolder;
+font-size: 21px;
+cursor: pointer;
+height: 100%;
+color: red;
+}
+
+.xitem {
+font-weight: bolder;
+font-size: 16px;
+cursor: pointer;
+height: 100%;
+}
+
+.checkout-div div:first-child {
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-align: center;
+padding-block: 12px;
+font-size: 18px;
+font-weight: 500;
+padding: 16px 28px;
+}
+
+.checkoutBtns {
+text-align: center;
+padding-bottom: 16px;
+}
+
+.checkoutBtns a:nth-child(2) {
+background-color: var(--collegeblue);
+margin-left: 4px;
+}
+
+.floating-text {
+position: absolute;
+font-size: 24px;
+color: white;
+font-weight: bold;
+animation: floatUp 3.5s ease-out forwards;
+pointer-events: none;
+user-select: none;
+z-index: 999;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+
+@media screen and (max-width: 475px){
+    header {
+    padding-left: 22px;
+    padding-right: 28px;
+    /* padding-top: 24px;
+    padding-bottom: 20px; */
+    }
+
+    .newhero {
+    margin-bottom: 48px;
+    padding-top: 32px;
+    }
+
+    .newhero h1 {
+    font-size: 35px;
+    }
+
+    .newhero p {
+    font-size: 16px;
+    padding-inline: 16px;
+    }
+
+    .formSection {
+    flex-wrap: wrap;
+    padding-inline: 18px;
+    gap: 28px;
+    }
+
+    form, .overview {
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    }
+
+    .formfields {
+    padding: 18px 16px;
+    }
+
+    .formfields div:not(.stack) {
+    flex-direction: column;
+    gap: 14px;
+    align-items: normal;
+    }
+
+    label {
+    font-size: 16px;
+    text-align: left;
+    }
+
+    select, #word, #school {
+    width: 100%;
+    }
+
+    input, textarea, select {
+    padding: 16px 16px;
+    font-size: 15.6px;
+    }
+}
+
+@media screen and (min-width: 475px) and (max-width: 640px) {
+    header {
+    padding-left: 26px;
+    padding-right: 28px;
+    /* padding-top: 26px;
+    padding-bottom: 22px; */
+    }
+
+    .newhero h1 {
+    font-size: 40px;
+    /* line-height: 58px; */
+    }
+
+    .formSection {
+    flex-wrap: wrap;
+    padding-inline: 28px;
+    gap: 30px;
+    }
+
+    form, .overview {
+    /* flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1; */
+    width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 640px) and (max-width: 768px) {
+    header {
+    padding-left: 28px;
+    }
+
+    .formSection {
+    flex-wrap: wrap;
+    padding-inline: 32px;
+    gap: 30px;
+    }
+}
+
+@media screen and (min-width: 1536px) and (max-width: 1866px) {
+    .formSection {
+    padding-inline: 320px;
+    }
+}
+
+@media screen and (min-width: 1866px) {
+    .formSection {
+    padding-inline: 448px;
+    }
+}
